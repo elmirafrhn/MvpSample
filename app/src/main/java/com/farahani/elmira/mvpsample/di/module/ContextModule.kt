@@ -1,4 +1,4 @@
-package com.farahani.elmira.mvpsample.module
+package com.farahani.elmira.mvpsample.di.module
 
 import android.app.Application
 import android.content.Context

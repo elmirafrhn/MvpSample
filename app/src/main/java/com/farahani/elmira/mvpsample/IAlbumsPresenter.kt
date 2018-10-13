@@ -1,6 +1,5 @@
 package com.farahani.elmira.mvpsample
 
-interface IAlbumsPresenter{
+import com.farahani.elmira.mvpsample.base.BasePresenter
 
-    fun onSearchStrated(album : AlbumsModel)
-}
+interface IAlbumsPresenter

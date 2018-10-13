@@ -1,4 +1,4 @@
-package com.farahani.elmira.mvpsample.module
+package com.farahani.elmira.mvpsample.di.module
 
 import com.farahani.elmira.mvpsample.BuildConfig
 import com.farahani.elmira.mvpsample.network.AlbumApi
