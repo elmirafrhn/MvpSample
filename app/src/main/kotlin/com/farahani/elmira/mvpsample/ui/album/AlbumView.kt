@@ -5,7 +5,7 @@ import com.farahani.elmira.mvpsample.base.BaseView
 import com.farahani.elmira.mvpsample.model.Album
 
 class AlbumView : IAlbumsView {
-    override fun updatePost(posts: List<Album>) {
+    override fun updateAlbums(albums: List<Album>) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 

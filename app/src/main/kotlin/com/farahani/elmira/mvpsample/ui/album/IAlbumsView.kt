@@ -6,7 +6,7 @@ import com.farahani.elmira.mvpsample.model.Album
 
 interface IAlbumsView : BaseView {
 
-    fun updatePost(posts: List<Album>)
+    fun updateAlbums(albums: List<Album>)
     fun showError(error: String)
     fun showErorr(@StringRes resId: Int) = this.showError(getContext().getString(resId))
     fun showLoading()

@@ -6,10 +6,10 @@ import com.farahani.elmira.mvpsample.ui.album.AlbumView
 import com.farahani.elmira.mvpsample.ui.album.IAlbumsView
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class AlbumsPresenter(albumView: AlbumView) : BasePresenter<AlbumView>(albumView) {
-
     lateinit var iAlbumsView: IAlbumsView
     @Inject
     lateinit var albumApi: AlbumApi
@@ -19,16 +19,21 @@ class AlbumsPresenter(albumView: AlbumView) : BasePresenter<AlbumView>(albumView
         loadAlbums()
     }
 
-    override fun onViewDestroyed() {
-        super.onViewDestroyed()
-    }
-
     private fun loadAlbums() {
         view.showLoading()
-//        disposable= albumApi.getAlbums()
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribeOn()
-//                .
+        disposable = albumApi.getAlbums()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .doOnTerminate { view.hideLoading() }
+                .subscribe(
+                        { albumsList -> view.updateAlbums(albumsList) },
+                        { view.showErorr(R.string.unknown_error) }
+                )
     }
+
+    override fun onViewDestroyed() {
+        disposable?.dispose()
+    }
+
 
 }

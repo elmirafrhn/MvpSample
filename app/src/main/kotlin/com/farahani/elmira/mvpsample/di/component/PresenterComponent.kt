@@ -9,20 +9,18 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [(ContextModule::class),(NetworkModule::class)])
-interface PresenterComponent{
+@Component(modules = [(ContextModule::class), (NetworkModule::class)])
+interface PresenterComponent {
 
     fun inject(albumsPresenter: AlbumsPresenter)
 
     @Component.Builder
-    interface Builder{
+    interface Builder {
 
-        fun build():PresenterComponent
+        fun build(): PresenterComponent
         fun networkModule(networkModule: NetworkModule): Builder
         fun contextModule(contextModule: ContextModule): Builder
         @BindsInstance
         fun baseView(baseView: BaseView): Builder
     }
-
-
 }
