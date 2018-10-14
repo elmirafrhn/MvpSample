@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
-        android:id = "@+id/cardViewRecepieItem"
+        android:id = "@+id/albumItemCv"
         android:layout_width = "fill_parent"
         android:layout_margin="3sp"
         android:elevation="4dp"
@@ -16,7 +17,7 @@
             android:background = "?attr/selectableItemBackgroundBorderless" >
 
             <ImageView
-                android:id = "@+id/ivPicture"
+                android:id = "@+id/albumItemIvPicture"
                 android:layout_width = "60dp"
                 android:layout_height = "60dp"
                 android:layout_margin = "5dp"
@@ -27,10 +28,10 @@
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:layout_centerVertical = "true"
-                android:layout_toRightOf = "@+id/ivPicture"
+                android:layout_toRightOf = "@+id/albumItemIvPicture"
                 android:orientation = "vertical" >
                 <TextView
-                    android:id = "@+id/tvRecepie"
+                    android:id = "@+id/albumItemTvRecepie"
                     android:layout_width = "fill_parent"
                     android:layout_height = "wrap_content"
                     android:paddingLeft = "4dp"
@@ -38,7 +39,7 @@
                     android:textStyle = "bold" />
 
                 <TextView
-                    android:id = "@+id/tvRecepieDetails"
+                    android:id = "@+id/albumItemTvRecepieDetails"
                     android:layout_width = "fill_parent"
                     android:layout_height = "wrap_content"
                     android:paddingLeft = "4dp"

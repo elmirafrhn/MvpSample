@@ -34,6 +34,4 @@ class AlbumsPresenter(albumView: AlbumView) : BasePresenter<AlbumView>(albumView
     override fun onViewDestroyed() {
         disposable?.dispose()
     }
-
-
 }
