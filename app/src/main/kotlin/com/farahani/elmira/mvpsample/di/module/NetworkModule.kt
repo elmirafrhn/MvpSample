@@ -1,7 +1,7 @@
 package com.farahani.elmira.mvpsample.di.module
 
-import com.farahani.elmira.mvpsample.BuildConfig
 import com.farahani.elmira.mvpsample.network.AlbumApi
+import com.farahani.elmira.myapplication.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
@@ -24,10 +24,10 @@ object NetworkModule {
     internal fun provideRetrofitInterface(): Retrofit {
 
         return Retrofit.Builder()
-                .baseUrl("${BuildConfig.BASE_URL}")
-                .addConverterFactory(MoshiConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
-                .build()
+            .baseUrl("${BuildConfig.BASE_URL}")
+            .addConverterFactory(MoshiConverterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
+            .build()
     }
 
 }

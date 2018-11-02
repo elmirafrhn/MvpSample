@@ -1,6 +1,6 @@
 package com.farahani.elmira.mvpsample.di.component
 
-import com.farahani.elmira.mvpsample.AlbumsPresenter
+import com.farahani.elmira.mvpsample.ui.album.AlbumsPresenter
 import com.farahani.elmira.mvpsample.base.BaseView
 import com.farahani.elmira.mvpsample.di.module.ContextModule
 import com.farahani.elmira.mvpsample.di.module.NetworkModule
